@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	console.log(document.cookie);
+	var name=document.cookie.split(";")[0].split("=")[1];
+	console.log(name);
+	console.log(getCookie("psw"));//123456
+	function getCookie(name)
+	{
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg)){
+	return unescape(arr[2]);
+	}else{
+	return null;}
+}
+
+</script>
